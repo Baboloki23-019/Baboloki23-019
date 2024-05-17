@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner_Bros | Home</title>
+    <link rel="website icon" type="png"
+    href="Images/pngwing2.com.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .carousel-caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: calc(1.525rem + 3.3vw);
+            text-align: left;
+            position: absolute;
+            bottom: 9rem;
+            color: #ffffff;
+            left: 1rem;
+            right: 0;
+            }
+        .carousel-inner{
+            height: 720px;
+            }
+      .navbar {
+    background-color: transparent !important;
+  }
+      .solid-nav {
+        background-color: #000 !important;
+        transition: background-color 0.3s ease-in-out;
+      }
+      h1{
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      /* Media query for small resolutions */
+      @media (max-width: 768px) {
+            .carousel-inner{
+                height: min-content;
+            }
+        .carousel-caption {
+            position: relative; 
+            margin-top: 10px; /* Adjust margin as needed */
+            text-align: left; /* Align caption text to center */
+            align-items: center;
+            left: 0;
+            font-size: 2rem;
+            width: 100%;
+            bottom: 0;
+           }
+        .carousel-control {
+        top: calc(50% - 20px); /* Adjust top position for smaller screens */
+           }
+        }
+
+li.me-auto img {
+  height: 6rem; 
+  width: 15rem; 
+  object-fit: fill;
+}
+.card {
+  width: 100%;
+  height: 400px;
+}
+    </style>
+  </head>
+  <body>
+  
+  <nav class="navbar nav nav-pills nav-fill navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="Images/Warner_Bros._logo_2023.svg.png" alt="logo" width="80" height="80" class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <strong><a class="nav-link active" aria-current="page" href="index.html" style="color: #000;">Home</a></strong>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tvshows.html">Tv Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="games&apps.html">Games & Apps</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="collection.html">Collection</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="feedback.html">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/warnerbrosent/"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://twitter.com/Warnerbros/"><svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" lc-helper="svg-icon" class=""><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.instagram.com/warnerbrosentertainment/"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/the last of us.jpg" class="d-block w-100 c-img" alt="the last of us img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">THE LAST OF US</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">THE LAST OF US</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="carousel-item" data-bs-interval="2000">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/maxresdefault.jpg" class="d-block w-100 c-img" alt="godzilla x kong the new empire img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">GODZILLA X KONG: THE NEW EMPIRE</h1>
+                        <p class="fs-4">Only In Theaters March 29, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">GODZILLA X KONG: THE NEW EMPIRE</h1>
+                        <p class="fs-6">Only In Theaters March 29, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/tenet.jpg" class="d-block w-100 c-img" alt="the watchers img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">SHRINKING</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">SHRINKING</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/The-War-of-the-Rohirrim.jpg" class="d-block w-100 c-img" alt=" The-War-of-the-Rohirrim img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">THE LORD OF THE RINGS:THE WAR OF THE ROHIRRIM</h1>
+                        <p class="fs-4">Only In Theaters December 13, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">THE LORD OF THE RINGS:THE WAR OF THE ROHIRRIM</h1>
+                        <p class="fs-6">Only In Theaters December 13, 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/inception.jpg" class="d-block w-100 c-img" alt=" Horizon american saga img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">INCEPTION</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">INCEPTION</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/Image20221214121407.jpg" class="d-block w-100 c-img" alt=" wb 100 years img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">WB100</h1>
+                        <p class="fs-4">Join celebration at            <a class="btn btn-primary" href="https://www.wb100.com/" role="button">WB100.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">WB100</h1>
+                        <p class="fs-6">Join celebration at            <a class="btn btn-primary" href="https://www.wb100.com/" role="button">WB100.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+      <section>
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="featurette1">
+        <div class="col-md-7">
+            <figure>
+                <blockquote class="blockquote">
+                  <p class="display-2">Experience the Magic of Warner Bros. Movies</p></blockquote>
+                  <br>
+                  <big>
+                  <p style="text-align: left;">
+                    Discover the extraordinary world of Warner Bros. films, where storytelling reaches new heights and imagination knows no bounds. From beloved classics to cutting-edge blockbusters, Warner Bros. continues to captivate audiences around the globe with its diverse range of cinematic experiences.
+                 </p>
+                </big>
+              </figure>
+        </div>
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="Images/bugs best.png" alt="Your image description" width="400px" height="200px">
+        </div>
+    </div>
+   
+        <br>
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Popular Movies & Tv Shows</div>
+      </div>
+    </div>
+  </div>
+</div>
+  <br>
+
+  <div class="slider">
+    <div class="mx-2">
+      <img src="Images/wonka.jpg" alt="wonka img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">WONKA</h2>
+          <p class="px-2">With dreams of opening a shop in a city renowned for its chocolate, a young and poor Willy Wonka discovers that the industry is run by a cartel of greedy chocolatiers.</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/wYmtRhKvmVE?si=V_LILap-RPWhUV6F">Watch now</div>
+      </div>
+    </div>
+    <div class="mx-2">
+      <img src="Images/the color purple cover photo.jpg" alt="the color purple img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">THE COLOR PURPLE</h2>
+          <p class="px-2">A woman faces many hardships in her life, but ultimately finds extraordinary strength and hope in the unbreakable bonds of sisterhood.</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/wPwzBUui1GA?si=lkszbY4jTQ0-rKWk">Watch now</div>
+      </div>
+    </div>
+    <div class="mx-2">
+      <img src="Images/blue-beetle-dc-comics-2023-movies--13988.jpg" alt="bluebeetle img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">BLUE BEETLE</h2>
+          <p class="px-2">An alien scarab chooses Jaime Reyes to be its symbiotic host, bestowing the recent college graduate with a suit of armor that's capable of extraordinary powers, forever changing his destiny as he becomes the superhero known as Blue Beetle</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/KQc6mkTgDXw?si=TG0SPI6qg_YLuow8">Watch now</div>
+      </div>
+    </div>
+    <div class="mx-2">
+      <img src="Images/barbie.jpg" alt="barbie img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">BARBIE</h2>
+          <p class="px-2">Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans.</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/pBk4NYhWNMM?si=JN7UB5Xwxn4J-eRK">Watch now</div>
+      </div>
+    </div>
+    <div class="mx-2">
+      <img src="Images/the nun ii.jpg" alt="the nun img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">THE NUN II</h2>
+          <p class="px-2">1956 - France. A priest is murdered. An evil is spreading. The sequel to the worldwide smash hit follows Sister Irene as she once again comes face-to-face with Valak, the demon nun.</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/QF-oyCwaArU?si=zHcKuCHtp2oJvhZS">Watch now</div>
+      </div>
+    </div>
+    <div class="mx-2">
+      <img src="Images/black adam.jpg" alt="black adam img">
+      <div class="text-center xyz">
+        <h2 class="pt-2 fw-bold">BLACK ADAM</h2>
+          <p class="px-2">Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods--and imprisoned just as quickly--Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.</p>
+          <div class="d-grid gap-2 col-8 mx-auto mb-4 btn btn-outline-primary watch-now" data-video="https://www.youtube.com/embed/mkomfZHG5q4?si=5ol4UaWlON075Mha">Watch now</div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg"> 
+      <div class="modal-content">
+          <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen style="width: 650px; height: 450px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+  <div>
+    <img src="Images/scooby.jpg" alt="scooby" style="max-width: 100%; height: auto; object-fit: cover;">
+    </div>
+  </div>  
+</section>
+
+
+
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Fan Favorites</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    <div class="col">
+      <div class="card card-cover h-105 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('Images/kombat\ xl.png');  background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="Images/mortal kombat xl logo.png" alt="mortal kombat xl png">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <i class="fab fa-video"></i>
+              <small>Earth</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+              <small>3d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-105 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('Images/shadow\ of\ war.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="Images/shadow of war logo.png" alt="">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+              <small>Pakistan</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+              <small>4d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card card-cover h-105 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('Images/batman\ arkham.jpg'); background-size: cover; background-position: center;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="me-auto">
+              <img src="Images/batman arkham logo.png" alt="" class="Movie-logo">
+            </li>
+            <li class="d-flex align-items-center me-3">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+              <small>California</small>
+            </li>
+            <li class="d-flex align-items-center">
+              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+              <small>5d</small>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <footer>
+        <div class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <div class="lc-block text-center mb-3 mb-md-0">
+              <a class="navbar-brand" href="index.html">
+                <img class="img-fluid me-1" src="Images/Warner_Bros._logo_2023.svg.png" alt="my brand" width="48px" height="48px">
+              </a>
+            </div>
+          </div>
+              <p class="h5" style="text-align: center;"></i>© 2024 Warner_Bros, Inc</p>
+        
+          <div class="col-md-4 justify-content-end d-flex gap-3">
+            <div class="lc-block">
+        
+              <a href="https://www.facebook.com/warnerbrosent/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16" lc-helper="svg-icon" class="">
+                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+                </svg>
+              </a>
+        
+            </div>
+        
+                  <div class="lc-block">	
+        
+                      <a href="https://twitter.com/Warnerbros/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" lc-helper="svg-icon" class="">
+                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                  </svg>
+              </a>
+            </div>
+                 
+            <div class="lc-block">
+        
+              <a href="https://www.instagram.com/warnerbrosentertainment/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"  lc-helper="svg-icon">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+                </svg>
+              </a>
+        
+            </div>
+            <div class="lc-block">
+        
+              <a href="https://www.youtube.com/user/WarnerBrosPictures">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16"  lc-helper="svg-icon">
+                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+       <!-- Custom Script -->
+       <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("featurette-show");
+                    }
+                });
+            });
+      
+            const features = document.querySelectorAll(".featurette");
+            features.forEach(feature => {
+                observer.observe(feature);
+            });
+      
+        
+            $('.slider').slick({
+                centerMode: true,
+                dots: true,
+                autoplay: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        Infinity: true,
+                        slidesToShow: 1
+                    },
+                }]
+            });
+        });
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('solid-nav');
+          } else {
+            navbar.classList.remove('solid-nav');
+          }
+        });
+      
+        // Add this script to ensure the transparent navbar initially
+        document.addEventListener('DOMContentLoaded', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY <= 50) {
+            navbar.classList.remove('solid-nav');
+          }
+        });
+
+      // Function to handle modal display and video playback
+    $(document).ready(function() {
+        $('.watch-now').click(function() {
+            var videoUrl = $(this).data('video');
+            $('#videoPlayer').attr('src', videoUrl); // Set video URL
+            $('#videoModal').modal('show'); // Show modal
+        });
+
+        // Clear video player source when modal is closed
+        $('#videoModal').on('hidden.bs.modal', function() {
+            $('#videoPlayer').attr('src', '');
+        });
+    });
+      </script>
+  </body>
+</html>

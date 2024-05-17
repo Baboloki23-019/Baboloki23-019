@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner_Bros | Movies</title>
+    <link rel="website icon" type="png"
+    href="Images/pngwing2.com.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/footers/footer-2/assets/css/footer-2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/movies" rel="stylesheet">
+                
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .featurette {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+    
+        .featurette-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .carousel-caption {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: calc(1.525rem + 3.3vw);
+            text-align: left;
+            position: absolute;
+            bottom: 9rem;
+            color: #ffffff;
+            left: 1rem;
+            right: 0;
+            }
+        .carousel-inner{
+            height: 725px;
+            } 
+      .navbar {
+    background-color: transparent !important;
+  }
+  
+      /* Add this CSS for the solid navbar */
+      .solid-nav {
+        background-color: #000 !important;
+        transition: background-color 0.3s ease-in-out;
+      }
+      h1{
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: 0;
+      }
+      .card-img-overlay {
+    opacity: 0; 
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    transition: opacity 0.3s ease; /* Add transition effect */
+    text-align: center;
+}
+.card-img-overlay .info{
+  margin-top: 3rem;
+}
+.card:hover .card-img-overlay {
+    opacity: 1; /* Make the text visible on hover */
+}
+@media (max-width: 768px) {
+            .carousel-inner{
+                height: min-content;
+            }
+        .carousel-caption {
+            position: relative; 
+            margin-top: 10px; /* Adjust margin as needed */
+            text-align: left; /* Align caption text to center */
+            align-items: center;
+            left: 0;
+            font-size: 2rem;
+            width: 100%;
+            bottom: 0;
+           }
+        .carousel-control {
+        top: calc(50% - 20px); /* Adjust top position for smaller screens */
+           }
+        }
+        @media (max-width: 576px) { /* Small devices (phones) */
+  .modal-dialog {
+    max-width: 90%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) { /* Medium devices (tablets) */
+  .modal-dialog {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) { /* Large devices (small desktops) */
+  .modal-dialog {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 993px) { /* Extra large devices (large desktops) */
+  .modal-dialog {
+    max-width: 40%;
+    margin: auto;
+  }
+}
+
+.card img {
+  width: 100%; /* Ensure the image fills the entire width of the card */
+  height: 26rem; /* Ensure the image fills the entire height of the card */
+  object-fit: cover; /* Ensure the image covers the entire space of the card */
+}
+    </style>
+</head>  
+<body>
+  <header>
+    <nav class="navbar nav nav-pills nav-fill navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="movies.html">
+          <img src="Images/Warner_Bros._logo_2023.svg.png" alt="logo" width="80" height="80" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <strong><a class="nav-link active" aria-current="page" href="movies.html" style="color: #000;">Movies</a></strong>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tvshows.html">Tv Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="games&apps.html">Games & Apps</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="collection.html">Collection</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="feedback.html">Feedback</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.facebook.com/warnerbrosent/"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/Warnerbros/"><svg xmlns="http://www.w3.org/2000/svg" width="1.1em" height="1.1em" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" lc-helper="svg-icon" class=""><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.instagram.com/warnerbrosentertainment/"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div id="hero-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/jutice league 4.jpg" class="d-block w-100 c-img" alt="justice league img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">Zack Snyder's Justice League</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">Zack Snyder's Justice League</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        <div class="carousel-item" data-bs-interval="2000">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/wrath of man photo.jpg" class="d-block w-100 c-img" alt="wrath of man img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">Wrath Of Man</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">Wrath Of Man</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/the little things.jpg" class="d-block w-100 c-img" alt="the little things img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">The Little Things</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">The Little Things</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/pokemon-detective-pikachu-justice-smith-ssxkvnz89w650h9b.jpg" class="d-block w-100 c-img" alt=" lPokémon Detective Pikachu img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">Pokémon Detective Pikachu</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">Pokémon Detective Pikachu</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/the nighmare on elm street.jpg" class="d-block w-100 c-img" alt=" a nighmare on elm street img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">A Nightmare On Elm Street</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">A Nightmare On Elm Street</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col">
+                    <img src="Images/anabelle.jpg" class="d-block w-100 c-img" alt=" anabelle img">
+                    <div class="carousel-caption d-none d-lg-block text-start">
+                        <h1 class="display-4 fw-bolder">Anabelle</h1>
+                        <p class="fs-4">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="carousel-caption d-lg-none text-start">
+                        <h1 class="display-6 fw-bolder">Anabelle</h1>
+                        <p class="fs-6">OWN IT NOW</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<section>
+          <div class="container my-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-7 col-md-8">
+                <div class="text-center">
+                  <div class="divider" class="text-light fw-bold" style="font-size: 55px;">Popular Movies</div>
+                </div>
+              </div>
+	            <br>
+            </div>
+          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="Images/aquaman and the lost kingdom poster.jpg" class="card-img-top" alt="aquaman and the lost kingdom img">
+            <div class="card-img-overlay">
+            <div class="info">
+            <h2>Aquaman And The Lost Kingdom</h2>   <span>Action/Adventure</span>
+            <p>1h 55m | 2023 </p>
+            <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal1">Play Trailer</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="Images/evil dead rise poster.jpg" class="card-img-top" alt="evil dead rise img">
+            <div class="card-img-overlay">
+            <div class="info">
+            <h2>Evil Dead Rise</h2>   <span>Horror/Fantasy</span>
+            <p>1h 37m | 2023 </p>
+            <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal2">Play Trailer</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="Images/shazam poster.jpg" class="card-img-top" alt="shazam fury of the Gods img">
+            <div class="card-img-overlay">
+            <div class="info">
+            <h2>Shazam! Fury Of The Gods</h2>   <span>Action/Adventure</span>
+            <p> 2h 10m | 2023</p>
+            <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal3">Play Trailer</button>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="Images/elvis poster.jpg" class="card-img-top" alt="elvis">
+            <div class="card-img-overlay">
+            <div class="info">
+            <h2>Elvis</h2>   <span>Musical/Drama</span>
+            <p>2h 39m  | 2022 </p>
+            <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal4">Play Trailer</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8 col-sm-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Action Movies</div>
+      </div>
+    </div>
+	<br>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/batman vs superman 1.png" class="card-img-top" alt="Batman vs Superman:Dawn of Justice">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Batman Vs Superman: Dawn Of Justice</h2>   <span>Action</span>
+        <p>2hr 31m  | 2016 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal5">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/meg 2.jpg" class="card-img-top" alt="meg 2 the trench img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Meg 2: The Trench</h2>   <span>Action</span>
+        <p>1hr 56m | 2023 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal6">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/blade runner cover.jpg" class="card-img-top" alt="blade runner img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Blade Runner</h2>   <span>Action</span>
+        <p>2hr 43m | 2017</p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal7">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/mortal kombact cover.jpg" class="card-img-top" alt="mortal kombat img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Mortal Kombat</h2>   <span>Action</span>
+        <p>2hr 31m  | 2016 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal8">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8 col-sm-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Horror Movies</div>
+      </div>
+    </div>
+	<br>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/it chapter 2 cover.jpg" class="card-img-top" alt="It chapter 2 img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>It Chapter Two</h2>   <span>Horror</span>
+        <p>2hr 49m |  2019</p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal9">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/anabelle come home cover.jpg" class="card-img-top" alt="anabelle come home img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Anabelle Comes Home</h2>   <span>Horror</span>
+        <p>1hr 46m | 2019  </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal10">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/the curse of la llarona cover.jpg" class="card-img-top" alt="the curse of llarona img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>The Curse Of La Llarona</h2>   <span>Horror</span>
+        <p>1hr 34m | 2019 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal11">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/the nun ii.jpg" class="card-img-top" alt="the nun ii">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>The Nun II</h2>   <span>Horror</span>
+        <p>1hr 50m | 2023 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal12">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8 col-sm-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Animation Movies</div>
+      </div>
+    </div>
+	<br>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/scoob cover.jpg" class="card-img-top" alt="scoob! image">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Scoob!</h2>   <span>Animation</span>
+        <p>1hr 33m |  2020 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal13">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/the lego movie 2 cover.jpg" class="card-img-top" alt="Lego movie 2 img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>The Lego Movie 2:The second part</h2>   <span>Animation</span>
+        <p>1hr 47mn | 2019 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal14">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/tom jerry cover.jpg" class="card-img-top" alt="tom and jerry img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>Tom & Jerry:Spy Quest</h2>   <span>Animation</span>
+        <p>1hr 13m | 2015 </p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal15">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="Images/dc super-pets cover photo.jpg" class="card-img-top" alt="dc super-pets img">
+        <div class="card-img-overlay">
+        <div class="info">
+        <h2>DC League of Super-Pets</h2>   <span>Animation</span>
+        <p>1hr 45m | 2022</p>
+        <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal16">Play Trailer</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 		
+    
+<div class="container my-3">
+  <div class="row justify-content-center">
+    <div class="col-lg-7 col-md-8">
+      <div class="text-center">
+        <div class="divider" class="text-light fw-bold" style="font-size: 55px; ">Comedy Movies</div>
+      </div>
+    </div>
+	<br>
+  </div>
+</div>	
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="Images/get smart cover.jpg" class="card-img-top" alt="get smart img">
+              <div class="card-img-overlay">
+              <div class="info">
+              <h2>Get Smart</h2>   <span>Comedy</span>
+              <p>1hr 50m |  2008 </p>
+              <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal17">Play Trailer</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="Images/the hangover cover.jpg" alt=" hangover img">
+              <div class="card-img-overlay">
+              <div class="info">
+              <h2>The Hangover ii</h2>   <span>Comedy</span>
+              <p>1hr 42m| 2011 </p>
+              <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal18">Play Trailer</button>
+              </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="Images/suicide squad poster.jpg" class="card-img-top" alt="the suicide squad img">
+              <div class="card-img-overlay">
+              <div class="info">
+              <h2>The Suicide Squad</h2>   <span>Comedy</span>
+              <p>2hr 12m | 2021 </p>
+              <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal19">Play Trailer</button>
+              </div>	
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="Images/Blended cover.jpg" class="card-img-top" alt="blended img">
+              <div class="card-img-overlay">
+              <div class="info">
+              <h2>Blended</h2>   <span>Comedy</span>
+              <p>1hr 57m | 2014 </p>
+              <button class="btn btn-outline-primary play-btn" data-bs-toggle="modal" data-bs-target="#trailerModal20">Play Trailer</button>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="trailerModal1" tabindex="-1" aria-labelledby="trailerModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel1">Aquaman and the Lost Kingdom</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/UGc5Tzz19UY?si=IAudhtYd6LsQrJcD" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal2" tabindex="-1" aria-labelledby="trailerModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel2">Evil Dead Rise</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/BqQNO7BzN08?si=tKbKsJ-IxZPBztFp" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal3" tabindex="-1" aria-labelledby="trailerModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel3">Shazam! Fury Of The Gods</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zi88i4CpHe4?si=6HEnr9k8XQKC5eUb" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal4" tabindex="-1" aria-labelledby="trailerModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel4">Elvis</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/wBDLRvjHVOY?si=O1IuPgAqTjrZiybR" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal5" tabindex="-1" aria-labelledby="trailerModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel5">Batman Vs Superman: Dawn Of Justice</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/mCrgllhLbMM?si=AWtTgtlC2VUO4rlR" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal6" tabindex="-1" aria-labelledby="trailerModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel6">Meg 2: The Trench</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/JujTYiDlu7g?si=5Gv55kWKbC_NPppY" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal7" tabindex="-1" aria-labelledby="trailerModalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel7">Blade Runner</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/gCcx85zbxz4?si=I-ag6ElvGPg-n6Wc" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal8" tabindex="-1" aria-labelledby="trailerModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel8">Mortal Kombat</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src=https://www.youtube.com/embed/QJHY4ggYCk4?si=2wEhGZDXdPno6oVf" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal9" tabindex="-1" aria-labelledby="trailerModalLabel9" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel9">It Chapter Two</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/xhJ5P7Up3jA?si=ql7OgpjmhqKwJaPb" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal10" tabindex="-1" aria-labelledby="trailerModalLabel10" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel10">Anabelle Comes Home</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/bCxm7cTpBAs?si=FEUZCRJcmFPJAg23" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal11" tabindex="-1" aria-labelledby="trailerModalLabel11" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel11">The Curse Of La Llorona</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/uOV-xMYQ7sk?si=QtJ6U9KmbWqQKFEr" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal12" tabindex="-1" aria-labelledby="trailerModalLabel12" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel12">The Nun II</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/QF-oyCwaArU?si=j1GzmLlX0eg3sKal" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal13" tabindex="-1" aria-labelledby="trailerModalLabel13" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel13">Scoob!</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/2NkHfCgNCYs?si=4IxsjbdTXFp-GSxo" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal14" tabindex="-1" aria-labelledby="trailerModalLabel14" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel14">The Lego Movie 2:The second part</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/XvHSlHhh1gk?si=1D3bdKjEcnDEXGbO" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal15" tabindex="-1" aria-labelledby="trailerModalLabel15" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel15">Tom & Jerry:Spy Quest</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/JSkEG5hTcts?si=WL5_6Q_Vc-t4w3fz" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal16" tabindex="-1" aria-labelledby="trailerModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel16">DC League of Super-Pets</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/1jkw2JPCl18?si=ZlJmYAITGDi9OmCE" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal17" tabindex="-1" aria-labelledby="trailerModalLabel17" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel17">Get Smart</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/JGMsMhp7q0c?si=cTPJAHglAHe5j0r_" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal18" tabindex="-1" aria-labelledby="trailerModalLabel18" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel18">The Hangover ii</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/ohF5ZO_zOYU?si=r8xwVwzwZhx-9Uub" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal19" tabindex="-1" aria-labelledby="trailerModalLabel19" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel19">The Suicide Squad</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/CmRih_VtVAs?si=LwXxJHPbVcgZR2Uk" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="trailerModal20" tabindex="-1" aria-labelledby="trailerModalLabel20" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="trailerModalLabel20">Blended</h5>
+              <button type="button" class="btn-close" style="background-color: rgb(159, 159, 254); border-color: white;" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <iframe width="100%" height="315" src="https://www.youtube.com/embed/V6cKLTmDB-k?si=UaThYxdXfB7T3__w" title="YouTube video player"" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<footer>
+	<div class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+		<div class="col-md-4 d-flex align-items-center">
+			<div class="lc-block text-center mb-3 mb-md-0">
+				<a class="navbar-brand" href="index.html">
+					<img class="img-fluid me-1" src="Images/Warner_Bros._logo_2023.svg.png" alt="my brand" width="48px" height="48px">
+				</a>
+
+				
+
+			</div>
+		</div>
+        <p class="h5" style="text-align: center;"></i>© 2024 Warner_Bros, Inc</p>
+
+		<div class="col-md-4 justify-content-end d-flex gap-3">
+			<div class="lc-block">
+
+				<a href="https://www.facebook.com/warnerbrosent/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16" lc-helper="svg-icon" class="">
+						<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
+					</svg>
+				</a>
+
+			</div>
+
+            <div class="lc-block">	
+
+                <a href="https://twitter.com/Warnerbros/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16" lc-helper="svg-icon" class="">
+						<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+					  </svg>
+				</a>
+			</div>
+				   
+			<div class="lc-block">
+
+				<a href="https://www.instagram.com/warnerbrosentertainment/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16" lc-helper="svg-icon">
+						<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
+					</svg>
+				</a>
+
+			</div>
+			<div class="lc-block">
+
+				<a href="https://www.youtube.com/user/WarnerBrosPictures">
+					<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" viewBox="0 0 16 16" lc-helper="svg-icon">
+						<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"></path>
+					</svg>
+				</a>
+
+			</div>
+		</div>
+	</div>
+</section>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("featurette-show");
+                    }
+                });
+            });
+      
+            const features = document.querySelectorAll(".featurette");
+            features.forEach(feature => {
+                observer.observe(feature);
+            });
+      
+            $('.slider').slick({
+                centerMode: true,
+                dots: true,
+                autoplay: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [{
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        Infinity: true,
+                        slidesToShow: 1
+                    },
+                }]
+            });
+        });
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('solid-nav');
+          } else {
+            navbar.classList.remove('solid-nav');
+          }
+        });
+
+        $(document).ready(function() {
+        $('.play-btn').click(function() {
+            var videoUrl = $(this).data('video'); // Get video URL from data attribute
+            $('#videoPlayer').attr('src', videoUrl); // Set video URL
+            $('#trailerModal').modal('show'); // Show modal
+        });
+
+        // Clear video player source when modal is closed
+        $('#trailerModal').on('hidden.bs.modal', function() {
+            var video = $('#videoPlayer').get(0); // Get video element
+            video.pause(); // Pause video
+            $('#videoPlayer').attr('src', ''); // Clear video source
+        });
+    });
+
+
+      </script>
+      
+</body>
+</html>

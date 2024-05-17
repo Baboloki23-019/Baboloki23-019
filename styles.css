@@ -1,0 +1,355 @@
+header{
+  color: #fff;
+}
+.navbar {
+    width: 100%;
+    margin: auto;
+    padding: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0;
+    }
+    .aria-current{
+      text-decoration: underline;
+      color: #007bff;
+    }
+.navbar-brand{
+    width: 240px;
+    cursor: pointer;
+    }
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    position: relative;
+    }
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    }
+.navbar ul li::after{
+    content:'';
+    height: 3px;
+    width: 0;
+    background: rgb(46, 0, 232);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+    }
+.navbar ul li:hover::after{
+    width:100%  
+}
+body {
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+      
+}
+html, body{
+  margin: 0;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  
+  font-size: 14px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.slick-slider button {
+    position: absolute;
+    top: 32%;
+    outline: "none";
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 35px;
+    background-color: black;
+    color: white;
+    z-index: 99;
+  }
+  
+  .slick-slider .slick-prev {
+    left: -2px;
+    font-size: 0;
+  }
+  
+  .slick-slider .slick-prev::before {
+    content: '<';
+    line-height: 1;
+    font-size: 25px;
+  }
+  
+  .slick-slider .slick-next {
+    right: -2px;
+    font-size: 0;
+  }
+  
+  .slick-slider .slick-next::after {
+    content: '>';
+    line-height: 1;
+    font-size: 25px;
+  }
+   
+  .slick-dots{
+    text-align: center;
+  }
+  
+  .slick-dots li{
+    display: inline-block;
+    padding: 1px;
+    background-color: #ccc;
+    margin: 10px 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .slick-dots button{
+    display: none;
+  }
+  
+  .slick-dots li.slick-active{
+    background: #000;
+  }
+  
+  .slick-slider img{
+    width: 100%;
+    height: 26rem;
+  }
+  
+  .slick-slide {
+    padding:40px 0;
+    position: relative;
+    height:auto !important;
+    opacity: 0.5;
+    transition: all 900ms ease;
+  }
+  
+  .slick-current {
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  } 
+  
+  .slick-slide .xyz{
+    opacity: 0;
+  }
+  
+  .slick-current .xyz{
+    opacity: 1;
+  }
+  
+  
+.featuretter{
+    width: 100%;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700,800');
+
+section{
+  color: #fff;
+  background-color: #000;
+}
+footer{
+  width: 100%;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  background-color: #000;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 0 calc(25% - 20px); /* Adjust card width for four cards in a row */
+  background-color: #000000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(136, 130, 222, 0.682) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: -1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card-content {
+  padding: 20px; /* Add padding to the card content */
+}
+.card-title {
+  font-size: 1.2rem; /* Adjust the font size of the title */
+  margin-bottom: 10px; /* Add some bottom margin to the title */
+}
+.play-content {
+  display: none; /* Hide play content by default */
+}
+.play-button {
+  font-size: 14px; /* Adjust font size for smaller screens */
+}
+
+.card:hover .play-content {
+  display: block; /* Show play content on hover */
+}
+.card-description {
+  font-size: 1rem; /* Adjust the font size of the description */
+  color: #ffffff; /* Set the text color to white */
+}
+@media screen and (max-width: 1200px) {
+  .card {
+    flex-basis: calc(33.33% - 20px); /* Adjust card width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 20px); /* Adjust card width for phone resolutions */
+  }
+}
+.movie-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); /* Adjust gradient colors and opacity */
+  pointer-events: none; /* Ensures the pseudo-element doesn't interfere with clicks */
+  z-index: 2; /* Ensures the gradient layer is behind the content */
+}
+
+.card img {
+  width: 100%;
+  height: 300px; /* Adjust the height of the image */
+  filter: none;
+}
+
+.info {
+  padding: 10px; /* Adjust the padding inside the card */
+  color:#fff;
+}
+
+.info h2 {
+  margin-top: 0;
+  font-size: 18px; /* Adjust the font size of the movie title */
+  text-align: center;
+}
+
+.info p {
+  font-size: 14px; /* Adjust the font size of the movie description */
+  margin-top: 0.5cm;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 150px; /* Adjust the width of the card for smaller screens */
+    height: 250px; /* Adjust the height of the card for smaller screens */
+  }
+
+  .card img {
+    height: 150px; /* Adjust the height of the image for smaller screens */
+  }
+
+  .info {
+    padding: 8px; /* Adjust the padding inside the card for smaller screens */
+  }
+
+  .info h2 {
+    font-size: 16px; /* Adjust the font size of the movie title for smaller screens */
+  }
+
+  .info p {
+    font-size: 12px; /* Adjust the font size of the movie description for smaller screens */
+  }
+}
+.featurette-divider {
+  border-color: 7px solid #1b007d; /* Increase border thickness to 3 pixels */
+}
+
+.modal-body {
+  text-align: center;
+}
+
+/* Center modal content vertically */
+.modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100% - 1rem);
+}
+/* Style modal title */
+.modal-title {
+  font-size: 24px;
+}
+.modal-content{
+  background-color: #000000;
+  color: #fff;
+  border-color: #007bff;
+}
+span {
+  padding: 0.125rem 0.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(151, 141, 141);
+  border-radius: 5px;
+}
+.bg-video {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+
+.bg-video video {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+}
+.divider {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Add spacing below the divider */
+  border-bottom: 2px solid #3700b8; /* Add a border below the divider */
+  padding-bottom: 10px; /* Add padding below the divider */
+}
+
+.modal-lg{
+  width: 700px;
+  height: 500px;
+}
