@@ -38,7 +38,6 @@
         margin-bottom: 0;
         margin-left: 0;
       }
-      /* Media query for small resolutions */
       @media (max-width: 768px) {
             .carousel-inner{
                 height: min-content;
@@ -66,6 +65,11 @@ li.me-auto img {
 .card {
   width: 100%;
   height: 400px;
+}
+@media screen and (max-width: 768px){
+  .mx-2 .img{
+    object-fit: fill;
+  }
 }
     </style>
   </head>
@@ -327,7 +331,7 @@ li.me-auto img {
       <div class="modal-content">
           <div class="modal-body">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen style="width: 650px; height: 450px;"></iframe>
+                    <iframe class="embed-responsive-item" id="videoPlayer" allowfullscreen style="width: 100%; height: 450px;"></iframe>
                 </div>
             </div>
         </div>
@@ -339,8 +343,6 @@ li.me-auto img {
     </div>
   </div>  
 </section>
-
-
 
 <div class="container my-3">
   <div class="row justify-content-center">
@@ -361,12 +363,8 @@ li.me-auto img {
               <img src="Images/mortal kombat xl logo.png" alt="mortal kombat xl png">
             </li>
             <li class="d-flex align-items-center me-3">
-              <i class="fab fa-video"></i>
-              <small>Earth</small>
             </li>
             <li class="d-flex align-items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
-              <small>3d</small>
             </li>
           </ul>
         </div>
@@ -381,12 +379,8 @@ li.me-auto img {
               <img src="Images/shadow of war logo.png" alt="">
             </li>
             <li class="d-flex align-items-center me-3">
-              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-              <small>Pakistan</small>
             </li>
             <li class="d-flex align-items-center">
-              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-              <small>4d</small>
             </li>
           </ul>
         </div>
@@ -401,12 +395,8 @@ li.me-auto img {
               <img src="Images/batman arkham logo.png" alt="" class="Movie-logo">
             </li>
             <li class="d-flex align-items-center me-3">
-              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-              <small>California</small>
             </li>
             <li class="d-flex align-items-center">
-              <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-              <small>5d</small>
             </li>
           </ul>
         </div>
