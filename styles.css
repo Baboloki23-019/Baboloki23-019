@@ -229,12 +229,6 @@ footer{
   font-size: 1.2rem; 
   margin-bottom: 10px; 
 }
-.play-content {
-  display: none; 
-}
-.play-button {
-  font-size: 14px; 
-}
 
 .card:hover .play-content {
   display: block;
@@ -390,33 +384,33 @@ height: auto;
   bottom: 0;
  }
 .carousel-control {
-top: calc(50% - 20px); 
- }
+  top: calc(50% - 20px); 
+  }
 }
 @media (max-width: 576px) { 
 .modal-dialog {
-max-width: 90%;
-margin: auto;
-}
+  max-width: 90%;
+  margin: auto;
+  }
 }
 
 @media (min-width: 577px) and (max-width: 768px) { 
 .modal-dialog {
-max-width: 70%;
-margin: auto;
-}
+  max-width: 70%;
+  margin: auto;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 992px) { 
 .modal-dialog {
-max-width: 50%;
-margin: auto;
-}
+  max-width: 50%;
+  margin: auto;
+  }
 }
 
 @media (min-width: 993px) { 
 .modal-dialog {
-max-width: 40%;
-margin: auto;
-}
+  max-width: 40%;
+  margin: auto;
+  }
 }
