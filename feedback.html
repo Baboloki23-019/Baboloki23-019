@@ -30,7 +30,6 @@
   background-color: transparent !important;
 }
 
-    /* Add this CSS for the solid navbar */
     .solid-nav {
       background-color: #000 !important;
       transition: background-color 0.3s ease-in-out;
@@ -95,6 +94,13 @@ input[type=submit]:hover {
   background-color: #4200dd;
   color: #ffffff;
 }
+#success-message {
+            display: none;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 10px;
+            border-color: #4200dd;
+        }
 
 
 </style>
@@ -254,18 +260,19 @@ input[type=submit]:hover {
                 <p>
                   <div class="container">
                     <form action="/action_page.php">
-                      <label for="fname">First Name</label>
-                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                  
-                      <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                  
-                      <label for="subject">Your Feedback</label>
-                      <textarea id="subject" name="subject" placeholder="Let us know..." style="height:100px"></textarea>
-                  
-                      <input type="submit" value="Submit feedback">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    
+                        <label for="subject">Your Feedback</label>
+                        <textarea id="subject" name="subject" placeholder="Let us know..." style="height:100px"></textarea>
+                    
+                        <input type="submit" value="Submit feedback">
                     </form>
-                  </div>
+                    <div id="success-message">Feedback sent!</div>
+                </div>
                 </p>
                 </big>
           </figure>
@@ -356,6 +363,57 @@ input[type=submit]:hover {
       navbar.classList.remove('solid-nav');
     }
   });
+
+  function validateForm() {
+            
+            var firstName = document.getElementById("fname").value;
+            var lastName = document.getElementById("lname").value;
+            var feedback = document.getElementById("subject").value;
+            
+            
+            if (firstName === "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+            
+            
+            if (lastName === "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+            
+       
+            if (feedback === "") {
+                alert("Feedback must be filled out");
+                return false;
+            }
+            
+         
+            return true;
+        }
+
+        function showSuccessMessage(event) {
+            event.preventDefault();  
+            
+            if (validateForm()) {
+                
+                var successMessage = document.getElementById("success-message");
+                successMessage.style.display = "block";
+                
+          
+                setTimeout(function() {
+                    successMessage.style.display = "none";
+                }, 3000);
+
+                event.target.reset();
+            }
+        }
+        
+        // Add event listener to the form submission
+        document.addEventListener("DOMContentLoaded", function() {
+            var form = document.querySelector("form");
+            form.addEventListener("submit", showSuccessMessage);
+        });
   </script>
 
   <!-- External Scripts -->
